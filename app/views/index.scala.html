@@ -1,0 +1,17 @@
+
+@import dao.Tables.UserdataRow
+@import helper._
+@import play.api.mvc.RequestHeader
+@(userForm : Form[UserdataRow], message : Option[String] = None)(implicit messages : Messages, request:RequestHeader)
+
+@main("Welcome to Play"){
+@if(!message.isEmpty) {
+<h3>@message.get</h3>
+}
+@form(CSRF(routes.HomeController.user)){
+@inputText(userForm("email"), '_showConstraints -> false)
+@inputText(userForm("username"), '_showConstraints -> false)
+@inputText(userForm("age"), '_showConstraints -> false)
+<input type="submit" value="Submit">
+}
+}
