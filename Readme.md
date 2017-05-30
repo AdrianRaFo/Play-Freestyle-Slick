@@ -5,7 +5,7 @@
 
 `Views`: The twirl templates
 
-`filters.Filters`: Do not touch at this moment, it's a security filter
+`Filters`: Security filters
 
 `Conf`: The `application.conf` with the configuration and `routes` with the app routes
 
