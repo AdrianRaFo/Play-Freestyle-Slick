@@ -5,7 +5,7 @@ The project use a [Freestyle-Slick](http://frees.io/docs/integrations/slick/) in
 To run this project you need to have installed:
   - `JDK`: v8
   - `SBT`: v0.13.15
-  - `Scala SDK`: v2.11.11
+  - `Scala SDK`: v2.11.11
   
 Once you have it all installed in project root execute in terminal `sbt run` and open in a browser `localhost:9000` to see it.
 
