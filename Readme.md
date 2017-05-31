@@ -7,7 +7,7 @@ To run this project you need to have installed:
   - `SBT`: v0.13.15
   - `Scala SDK`: v1.11.11
   
-Once you have it all installed in project root execute in terminal `sbt run` and open in a browser `localhost:9000` to see itd.....
+Once you have it all installed in project root execute in terminal `sbt run` and open in a browser `localhost:9000` to see it.
 
 ## Folder guide
 `Controllers`: Compose by actions that get the request and return a response or redirect to another action.
@@ -26,9 +26,9 @@ Once you have it all installed in project root execute in terminal `sbt run` and
 
 I'm using ìn this project [Slick-CodeGen](http://slick.lightbend.com/doc/3.2.0/codegen-api/index.html#package).
 
-To generate the file `Tables.scala` with the mapping you can execute `sbt slick-gen.
+To generate the file `Tables.scala` with the mapping you can execute `sbt slick-gen`.
 
-Schema`.## 
+## Schema.
 
 To generate the schema you can run `Tables.schema.create` first in the `main` method.
 
