@@ -13,8 +13,8 @@ libraryDependencies ++= Seq(
   "org.postgresql"     % "postgresql"       % "9.4.1212",
   "com.typesafe.slick" %% "slick"           % "3.2.0",
   "com.typesafe.slick" %% "slick-codegen"   % "3.2.0",
-  "io.frees"           %% "freestyle"       % "0.1.1",
-  "io.frees"           %% "freestyle-slick" % "0.1.1"
+  "io.frees"           %% "freestyle"       % "0.2.0",
+  "io.frees"           %% "freestyle-slick" % "0.2.0"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
