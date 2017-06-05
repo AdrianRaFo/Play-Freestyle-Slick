@@ -42,7 +42,7 @@ lazy val slickCodeGenTask = Def.task {
         "app",
         "dao",
         "postgres",
-        "Arfpostgre"
+        "postgres"
       ),
       streams.value.log
     ))
