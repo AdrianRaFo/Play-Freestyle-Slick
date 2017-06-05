@@ -45,17 +45,17 @@ class HomeController @Inject()(val messagesApi: MessagesApi) extends Controller 
       userData => {
         /* binding success, you get the actual value. */
         UserDataDB.insertUser(userData).interpret[Future] mapAll [Result] {
-          case Success(r) ⇒ Redirect(routes.HomeController.userGet(r))
+          case Success(r) ⇒ Redirect(routes.HomeController.getUsers)
           case Failure(e) ⇒ InternalServerError(views.html.index(userForm, e.getMessage))
         }
       }
     )
   }
 
-  def userGet(email: String) = Action.async { implicit request =>
+  def getUsers = Action.async { implicit request =>
     UserDataDB.listUser.interpret[Future] mapAll [Result] {
       case Success(result: List[UserdataRow]) ⇒ Ok(Json.toJson(result))
-      case Failure(_)                         ⇒ InternalServerError(views.html.user(None, email))
+      case Failure(_)                         ⇒ InternalServerError(views.html.user(None))
     }
   }
 

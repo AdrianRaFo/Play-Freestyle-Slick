@@ -1,10 +1,10 @@
 @import dao.Tables.UserdataRow
 
-@(users: Option[List[UserdataRow]], email:String)
+@(users: Option[List[UserdataRow]])
 
 @main("Welcome to Play"){
 @if(!users.isEmpty) {
-<h1>Usuario insertado: @(email)</h1>
+<h1>Usuario insertado</h1>
 <ul>
 @for(userdata <- (users.get)) {
   <li>Email: @(userdata.email) Name: @(userdata.username) Age: @(userdata.age.get)</li>
